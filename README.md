@@ -13,15 +13,50 @@ ember install ember-intl-fns
 
 Usage
 ------------------------------------------------------------------------------
+* [`intl-date-time-format`](#intl-date-time-format)
+* [`intl-number-format`](#intl-number-format)
 * [`intl-relative-time-format`](#intl-relative-time-format)
 
 
-#### `intl-relative-time-format`
-Provides language-sensitive relative time formatting. See [Intl.RelativeTimeFormat.format()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat) for details on the Intl.RelativeTimeFormat.format() function.
-
+#### `intl-date-time-format`
+Provides language-sensitive date time formatting. See [Intl.DateTimeFormat.format()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) for details on the Intl.DateTimeFormat.format() function.
 
 ```hbs
-{{intl-relative-time-format locale value unit (hash "localeMatcher"="best fit" "numeric"="always" "style"="long")}}
+{{intl-date-time-format locale value (hash 
+  "localeMatcher"="best fit" 
+  "year"="numeric"
+  "month"="long"
+  "day"="numeric",
+  "hour"="numeric",
+  "minute"="numeric",
+  "second"="numeric",
+  "hour12"=true)
+}}
+```
+
+#### `intl-number-format`
+Provides language-sensitive number formatting. See [Intl.Number.format()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) for details on the Intl.Number.format() function.
+
+```hbs
+{{intl-number-format locale value (hash 
+  "localeMatcher"="best fit" 
+  "style"="decimal",
+  "useGrouping"=true,
+  "minimumIntegerDigits"=1,
+  "minimumFractionDigits"=2,
+  "maximumFractionDigits"=4)
+}}
+```
+
+#### `intl-relative-time-format`
+Provides language-sensitive relative time formatting. See [Intl.RelativeTimeFormat.format()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat) for details on the Intl.RelativeTimeFormat.format() function. Note, currently in Stage 3 and not supported by Edge, IE, Safari, and Safari IOS although will downgrade gracefully.
+
+```hbs
+{{intl-relative-time-format locale value unit (hash 
+  "localeMatcher"="best fit" 
+  "numeric"="always" 
+  "style"="long")
+}}
 ```
 
 Compatibility
