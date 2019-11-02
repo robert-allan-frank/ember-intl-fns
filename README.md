@@ -59,6 +59,13 @@ Provides language-sensitive relative time formatting. See [Intl.RelativeTimeForm
 }}
 ```
 
+Related Addons
+------------------------------------------------------------------------------
+* See [ember-array-fns](https://github.com/robert-allan-frank/ember-array-fns) for array based helpers.
+* See [ember-math-fns](https://github.com/robert-allan-frank/ember-math-fns) for math based helpers.
+* See [ember-number-fns](https://github.com/robert-allan-frank/ember-number-fns) for number based helpers.
+* See [ember-string-fns](https://github.com/robert-allan-frank/ember-string-fns) for string based helpers.
+
 Compatibility
 ------------------------------------------------------------------------------
 * Ember.js v3.4 or above
