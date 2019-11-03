@@ -1,6 +1,6 @@
 {
   "name": "ember-intl-fns",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This addon provides internationalization helpers for Ember templates and components.",
   "keywords": [
     "ember-addon"
